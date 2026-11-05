@@ -1,0 +1,30 @@
+case_id,status,elapsed_seconds,prompt,output,error,check_contains,check_passed
+smoke-001,ok,10.427,Скажи привет одним словом.,Привет,,Привет,True
+math-002,ok,12.273,Сколько будет 25 умножить на 17?,425,,425,True
+translate-003,ok,10.245,Переведи на английский: 'Утро вечера мудренее'.,**The morning is wiser than the evening.**,,morning,True
+code-004,ok,11.937,"Напиши функцию на Python, которая проверяет, простое ли число.","```python
+def is_prime(n: int) -> bool:
+    """"""Проверяет, является ли число простым.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+```
+
+**Примеры:**
+```python
+print(is_prime(2))   # True
+print(is_prime(17))  # True
+print(is_prime(100)) # False
+print(is_prime(1))   # False
+```
+
+Работает за `O(√n)` — проверяет делители только до квадратного корня и пропускаёт чётные.",,def,True
+reasoning-005,ok,9.966,"Если у меня 3 яблока, я съел одно, сколько осталось?",Осталось 2 яблока.,,2,True

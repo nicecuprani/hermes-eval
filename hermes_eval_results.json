@@ -1,0 +1,52 @@
+[
+  {
+    "case_id": "smoke-001",
+    "status": "ok",
+    "elapsed_seconds": 10.427,
+    "output": "Привет",
+    "error": null,
+    "prompt": "Скажи привет одним словом.",
+    "check_contains": "Привет",
+    "check_passed": true
+  },
+  {
+    "case_id": "math-002",
+    "status": "ok",
+    "elapsed_seconds": 12.273,
+    "output": "425",
+    "error": null,
+    "prompt": "Сколько будет 25 умножить на 17?",
+    "check_contains": "425",
+    "check_passed": true
+  },
+  {
+    "case_id": "translate-003",
+    "status": "ok",
+    "elapsed_seconds": 10.245,
+    "output": "**The morning is wiser than the evening.**",
+    "error": null,
+    "prompt": "Переведи на английский: 'Утро вечера мудренее'.",
+    "check_contains": "morning",
+    "check_passed": true
+  },
+  {
+    "case_id": "code-004",
+    "status": "ok",
+    "elapsed_seconds": 11.937,
+    "output": "```python\ndef is_prime(n: int) -> bool:\n    \"\"\"Проверяет, является ли число простым.\"\"\"\n    if n < 2:\n        return False\n    if n == 2:\n        return True\n    if n % 2 == 0:\n        return False\n    \n    for i in range(3, int(n**0.5) + 1, 2):\n        if n % i == 0:\n            return False\n    return True\n```\n\n**Примеры:**\n```python\nprint(is_prime(2))   # True\nprint(is_prime(17))  # True\nprint(is_prime(100)) # False\nprint(is_prime(1))   # False\n```\n\nРаботает за `O(√n)` — проверяет делители только до квадратного корня и пропускаёт чётные.",
+    "error": null,
+    "prompt": "Напиши функцию на Python, которая проверяет, простое ли число.",
+    "check_contains": "def",
+    "check_passed": true
+  },
+  {
+    "case_id": "reasoning-005",
+    "status": "ok",
+    "elapsed_seconds": 9.966,
+    "output": "Осталось 2 яблока.",
+    "error": null,
+    "prompt": "Если у меня 3 яблока, я съел одно, сколько осталось?",
+    "check_contains": "2",
+    "check_passed": true
+  }
+]
